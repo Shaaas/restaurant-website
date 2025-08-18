@@ -23,3 +23,12 @@ const revealOnScroll = () => {
 
 window.addEventListener("scroll", revealOnScroll);
 revealOnScroll();
+
+// Testimonial Carousel
+let testimonials = document.querySelectorAll(".testimonials blockquote");
+let index = 0;
+function showTestimonial() {
+  testimonials.forEach((t,i)=>t.classList.toggle("active", i===index));
+  index = (index+1)%testimonials.length;
+}
+setInterval(showTestimonial,4000);
