@@ -1,34 +1,25 @@
-// Smooth Scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function(e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth"
+// Scroll Reveal Animation
+const reveal = () => {
+    const reveals = document.querySelectorAll('.reveal');
+    reveals.forEach(el => {
+        let windowHeight = window.innerHeight;
+        let elementTop = el.getBoundingClientRect().top;
+        if (elementTop < windowHeight - 100) {
+            el.classList.add('active');
+        }
     });
-  });
-});
-
-// Scroll Reveal Animations
-const sections = document.querySelectorAll(".fade-in, .slide-in");
-
-const revealOnScroll = () => {
-  const triggerBottom = window.innerHeight * 0.85;
-  sections.forEach(section => {
-    const sectionTop = section.getBoundingClientRect().top;
-    if (sectionTop < triggerBottom) {
-      section.classList.add("visible");
-    }
-  });
 };
 
-window.addEventListener("scroll", revealOnScroll);
-revealOnScroll();
+window.addEventListener('scroll', reveal);
 
-// Testimonial Carousel
-let testimonials = document.querySelectorAll(".testimonials blockquote");
-let index = 0;
-function showTestimonial() {
-  testimonials.forEach((t,i)=>t.classList.toggle("active", i===index));
-  index = (index+1)%testimonials.length;
-}
-setInterval(showTestimonial,4000);
+// Simple Form Feedback
+document.getElementById('booking-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const btn = this.querySelector('button');
+    btn.innerText = "Booking Confirmed!";
+    btn.style.background = "#28a745";
+    alert("Thank you! Your table is reserved.");
+});
+
+// Run reveal on load
+reveal();
