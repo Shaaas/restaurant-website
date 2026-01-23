@@ -3,108 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="La Belle Cuisine - Authentic French fine-dining in Paris. Experience culinary art with organic, local ingredients.">
     <title>La Belle Cuisine | Fine Dining & Elegance</title>
-    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <nav>
+        <nav aria-label="Main Navigation">
             <h1 class="logo">La Belle <span>Cuisine</span></h1>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#menu">Menu</a></li>
+                <li><a href="#team">Team</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#reservation" class="nav-btn">Book a Table</a></li>
             </ul>
-            <div class="menu-toggle">☰</div>
+            <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
         </nav>
     </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h2 class="reveal">Experience <span>Culinary</span> Art</h2>
-            <p class="reveal">Where traditional heritage meets modern elegance.</p>
-            <div class="hero-btns reveal">
-                <a href="#menu" class="btn">View Menu</a>
-                <a href="#reservation" class="btn btn-outline">Reservations</a>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2 class="reveal">Experience <span>Culinary</span> Art</h2>
+                <p class="reveal">Where traditional heritage meets modern elegance.</p>
+                <div class="hero-btns reveal">
+                    <a href="#menu" class="btn">View Menu</a>
+                    <a href="#reservation" class="btn btn-outline">Reservations</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="about" class="section reveal">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-text">
-                    <span class="subtitle">Our Story</span>
-                    <h2>A Passion for Flavor</h2>
-                    <p>Founded in 1998, La Belle Cuisine has been the heart of the city's dining scene. We source only organic, local ingredients to create masterpieces that stay true to French roots while embracing global innovation.</p>
-                </div>
-                <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=600&q=80" alt="Chef Cooking">
+        <section id="about" class="section reveal">
+            <div class="container">
+                <div class="about-grid">
+                    <article class="about-text">
+                        <span class="subtitle">Our Story</span>
+                        <h2>A Passion for Flavor</h2>
+                        <p>Founded in 1998, La Belle Cuisine has been the heart of the city's dining scene. We source only organic, local ingredients to create masterpieces that stay true to French roots while embracing global innovation.</p>
+                    </article>
+                    <figure class="about-img">
+                        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=600&q=80" alt="Executive Chef preparing a signature dish">
+                    </figure>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="menu" class="section reveal">
-        <span class="subtitle">Exquisite Taste</span>
-        <h2>Our Signature Menu</h2>
-        <div class="menu-grid">
-            <div class="menu-item">
-                <div class="menu-info">
-                    <h3>Signature Pasta</h3>
-                    <span class="price">$28</span>
+        <section id="team" class="section reveal">
+            <div class="container text-center">
+                <span class="subtitle">Meet the Masters</span>
+                <h2>Our Culinary Team</h2>
+                <div class="team-grid">
+                    <article class="team-member">
+                        <img src="https://images.unsplash.com/photo-1583394293235-4815c15ee62c?auto=format&fit=crop&w=300&h=400&q=80" alt="Chef Julien Dubois">
+                        <h3>Julien Dubois</h3>
+                        <p>Executive Chef</p>
+                    </article>
+                    <article class="team-member">
+                        <img src="https://images.unsplash.com/photo-1577214190218-3a4d02e39758?auto=format&fit=crop&w=300&h=400&q=80" alt="Chef Elena Rossi">
+                        <h3>Elena Rossi</h3>
+                        <p>Head Pastry Chef</p>
+                    </article>
+                    <article class="team-member">
+                        <img src="https://images.unsplash.com/photo-1512485694743-9c9538b4e6e0?auto=format&fit=crop&w=300&h=400&q=80" alt="Marcello Viti">
+                        <h3>Marcello Viti</h3>
+                        <p>Master Sommelier</p>
+                    </article>
                 </div>
-                <p>Hand-rolled pappardelle with wild mushroom truffle cream.</p>
             </div>
-            <div class="menu-item">
-                <div class="menu-info">
-                    <h3>Grilled Salmon</h3>
-                    <span class="price">$34</span>
-                </div>
-                <p>Atlantic salmon with citrus glaze and asparagus.</p>
-            </div>
-            <div class="menu-item">
-                <div class="menu-info">
-                    <h3>Chocolate Lava Cake</h3>
-                    <span class="price">$14</span>
-                </div>
-                <p>Dark Belgian chocolate with a molten heart and gelato.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="reservation" class="section reveal">
-        <div class="res-container">
-            <h2>Make a Reservation</h2>
-            <form id="booking-form">
-                <div class="form-row">
-                    <input type="text" placeholder="Full Name" required>
-                    <input type="email" placeholder="Email Address" required>
+        <section id="reviews" class="section reveal secondary-bg">
+            <div class="container text-center">
+                <span class="subtitle">Guest Experience</span>
+                <h2>What People Say</h2>
+                <div class="testimonial-slider">
+                    <blockquote>
+                        <p>"An unforgettable evening. The Truffle Pasta is a masterpiece and the service is impeccable."</p>
+                        <cite>— Sarah J., Food Critic</cite>
+                    </blockquote>
                 </div>
-                <div class="form-row">
-                    <input type="date" required>
-                    <select required>
-                        <option value="">Number of Guests</option>
-                        <option value="1">1 Person</option>
-                        <option value="2">2 People</option>
-                        <option value="4">4 People</option>
-                        <option value="5+">5+ People</option>
-                    </select>
+            </div>
+        </section>
+
+        <section id="menu" class="section reveal">
+            <div class="container">
+                <span class="subtitle">Exquisite Taste</span>
+                <h2>Our Signature Menu</h2>
+                <div class="menu-grid">
+                    <article class="menu-item">
+                        <div class="menu-info">
+                            <h3>Signature Pasta</h3>
+                            <span class="price">$28</span>
+                        </div>
+                        <p>Hand-rolled pappardelle with wild mushroom truffle cream.</p>
+                        <small class="tag">Vegetarian</small>
+                    </article>
+                    <article class="menu-item">
+                        <div class="menu-info">
+                            <h3>Grilled Salmon</h3>
+                            <span class="price">$34</span>
+                        </div>
+                        <p>Atlantic salmon with citrus glaze and asparagus.</p>
+                        <small class="tag">Gluten-Free</small>
+                    </article>
+                    <article class="menu-item">
+                        <div class="menu-info">
+                            <h3>Chocolate Lava Cake</h3>
+                            <span class="price">$14</span>
+                        </div>
+                        <p>Dark Belgian chocolate with a molten heart and gelato.</p>
+                    </article>
                 </div>
-                <button type="submit" class="btn btn-full">Confirm Booking</button>
-            </form>
-        </div>
-    </section>
+            </div>
+        </section>
+
+        <section id="gallery" class="section reveal">
+            <div class="gallery-grid">
+                <figure><img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=400" alt="Signature cocktail"></figure>
+                <figure><img src="https://images.unsplash.com/photo-1550966841-391ad29a0764?auto=format&fit=crop&w=400" alt="Restaurant dining area"></figure>
+                <figure><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=400" alt="Gourmet presentation"></figure>
+                <figure><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=400" alt="Plated French cuisine"></figure>
+            </div>
+        </section>
+
+        <section id="reservation" class="section reveal">
+            <div class="res-container">
+                <h2>Make a Reservation</h2>
+                <form id="booking-form">
+                    <div class="form-row">
+                        <input type="text" aria-label="Full Name" placeholder="Full Name" required>
+                        <input type="email" aria-label="Email Address" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="date" aria-label="Reservation Date" min="2026-01-23" required>
+                        <select aria-label="Number of Guests" required>
+                            <option value="">Number of Guests</option>
+                            <option value="1">1 Person</option>
+                            <option value="2">2 People</option>
+                            <option value="4">4 People</option>
+                            <option value="5+">5+ People</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-full">Confirm Booking</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>© 2026 La Belle Cuisine | 123 Luxury Lane, Paris</p>
-        <div class="socials">
-            <a href="#">Instagram</a> • <a href="#">Facebook</a>
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <h3>La Belle Cuisine</h3>
+                <p>123 Luxury Lane, Paris</p>
+                <p>Phone: +33 1 23 45 67 89</p>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Join the Club</h4>
+                <p>Subscribe for exclusive event invites.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit">Join</button>
+                </form>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="socials">
+                    <a href="#">Instagram</a> • <a href="#">Facebook</a>
+                </div>
+            </div>
         </div>
+        <p class="copyright">© 2026 La Belle Cuisine. All Rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script>
